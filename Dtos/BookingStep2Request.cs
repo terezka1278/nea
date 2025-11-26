@@ -1,4 +1,3 @@
-﻿// Neaproject/Dtos/BookingStep2Request.cs
 using System.Collections.Generic;
 
 namespace Neaproject.Dtos
@@ -20,3 +19,4 @@ namespace Neaproject.Dtos
         public string SelectedDate { get; set; } = "";
     }
 }
+
