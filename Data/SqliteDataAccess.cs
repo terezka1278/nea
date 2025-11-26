@@ -5,6 +5,7 @@ using Dapper;
 using Neaproject.Models;
 using Neaproject.Dtos;
 
+//TODO: NEED TO COMMENT FULL CODE
 namespace Neaproject.Data
 {
     public class SqliteDataAccess //class to allow communication with database
@@ -16,6 +17,8 @@ namespace Neaproject.Data
         {
             return new SQLiteConnection(LoadConnectionString());
         }
+
+        //builds full path to database file so that the app can find it
         private string LoadConnectionString()
         {
             var dbPath = Path.Combine(AppContext.BaseDirectory, "database.db");
@@ -338,5 +341,6 @@ namespace Neaproject.Data
     }
 
 }
+
 
 
