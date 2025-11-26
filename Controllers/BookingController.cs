@@ -6,112 +6,96 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
+ //TODO: ADD IN VALIDATION
 namespace Neaproject.Controllers
 {
-    [ApiController]
-    [Route("api/booking")]
-    public class BookingController : ControllerBase
-    {
-        private readonly SqliteDataAccess _db;
+    [ApiController] //tells the program it is an API
+    [Route("api/booking")] //defines base route and all endpoints start with api/booking
 
+    //create controller class
+    public class BookingController : ControllerBase 
+    {
+        private readonly SqliteDataAccess _db; //stores database access service securely in a private field
+
+        // contructor that recievess SqliteDataAcess instance
         public BookingController(SqliteDataAccess db)
         {
             _db = db;
         }
-
-        // ------------------ STEP 1 ------------------
-        [HttpPost("step1")]
-        public IActionResult Step1([FromBody] BookingStep1Request model)
+        
+        //step 1 of booking
+        [HttpPost("step1")] // runs when frontend POSTs to /api/booking/step1
+        public IActionResult Step1([FromBody] BookingStep1Request model) //read JSON from request body into BookingStep1Request
         {
-            if (model == null)
-                return BadRequest(new { message = "No data sent." });
-
-            if (string.IsNullOrWhiteSpace(model.FirstName) ||
-                string.IsNullOrWhiteSpace(model.LastName) ||
-                string.IsNullOrWhiteSpace(model.Email) ||
-                string.IsNullOrWhiteSpace(model.PhoneNum) ||
-                string.IsNullOrWhiteSpace(model.Address) ||
-                string.IsNullOrWhiteSpace(model.Postcode) ||
-                string.IsNullOrWhiteSpace(model.Service) ||
-                string.IsNullOrWhiteSpace(model.Summary) ||
-                model.Points <= 0)
+            if (model == null) //stop if no data was sent
+                return BadRequest(new { message = "No data sent." }); //output this message
+               
+            using (var conn = _db.GetConnection()) //opens a database connection
             {
-                return BadRequest(new { message = "Please fill in all required fields." });
-            }
-
-            try
-            {
-                using (var conn = _db.GetConnection())
+                conn.Open();
+                using (var tx = conn.BeginTransaction()) //start transaction so all changes happen together
                 {
-                    conn.Open();
-                    using (var tx = conn.BeginTransaction())
+                    string clientIdToUse; //store clientID to use for new job
+
+                    
+                    if (!string.IsNullOrWhiteSpace(model.ClientId)) //if user claims to be logged in
                     {
-                        string clientIdToUse;
-
-                        // ----- USER CLAIMS TO BE LOGGED IN -----
-                        if (!string.IsNullOrWhiteSpace(model.ClientId))
+                        using (var cmd = new SQLiteCommand(
+                            "SELECT Email FROM Clients WHERE ClientID = @ClientID;", conn, tx))
                         {
-                            using (var cmd = new SQLiteCommand(
-                                "SELECT Email FROM Clients WHERE ClientID = @ClientID;", conn, tx))
-                            {
-                                cmd.Parameters.AddWithValue("@ClientID", model.ClientId);
-                                var emailInDb = cmd.ExecuteScalar() as string;
+                            cmd.Parameters.AddWithValue("@ClientID", model.ClientId);
+                            var emailInDb = cmd.ExecuteScalar() as string;
 
-                                if (emailInDb == null)
-                                    return BadRequest(new { message = "Login invalid.", requiresLogin = true });
+                            if (emailInDb == null)
+                                return BadRequest(new { message = "Login invalid.", requiresLogin = true });
 
-                                if (!string.Equals(emailInDb, model.Email.Trim(), StringComparison.OrdinalIgnoreCase))
-                                    return BadRequest(new { message = "Email mismatch.", requiresLogin = true });
+                            if (!string.Equals(emailInDb, model.Email.Trim(), StringComparison.OrdinalIgnoreCase))
+                                return BadRequest(new { message = "Email mismatch.", requiresLogin = true });
 
-                                clientIdToUse = model.ClientId;
-                            }
+                            clientIdToUse = model.ClientId;
                         }
-                        else
-                        {
-                            // ----- USER NOT LOGGED IN -----
-                            using (var checkCmd = new SQLiteCommand(
-                                "SELECT ClientID FROM Clients WHERE Email = @Email;", conn, tx))
-                            {
-                                checkCmd.Parameters.AddWithValue("@Email", model.Email);
-                                var exists = checkCmd.ExecuteScalar();
-
-                                if (exists != null)
-                                    return BadRequest(new { message = "Account exists. Please log in.", requiresLogin = true });
-
-                                return BadRequest(new { message = "No account found. Please create one.", requiresAccount = true });
-                            }
-                        }
-
-                        // ----- CREATE JOB -----
-                        string jobId = Guid.NewGuid().ToString();
-
-                        using (var insertJob = new SQLiteCommand(@"
-                            INSERT INTO Jobs (JobID, ClientID, ServiceID, DateStarted, DateFinished, Status, Summary, NumOfPoints)
-                            VALUES (@JobID, @ClientID, @ServiceID, NULL, NULL, 'Not Started', @Summary, @NumOfPoints);
-                        ", conn, tx))
-                        {
-                            insertJob.Parameters.AddWithValue("@JobID", jobId);
-                            insertJob.Parameters.AddWithValue("@ClientID", clientIdToUse);
-                            insertJob.Parameters.AddWithValue("@ServiceID", model.Service);
-                            insertJob.Parameters.AddWithValue("@Summary", model.Summary);
-                            insertJob.Parameters.AddWithValue("@NumOfPoints", model.Points);
-                            insertJob.ExecuteNonQuery();
-                        }
-
-                        tx.Commit();
-
-                        return Ok(new { clientId = clientIdToUse, jobId });
                     }
+                    else
+                    {
+            
+                        using (var checkCmd = new SQLiteCommand(
+                            "SELECT ClientID FROM Clients WHERE Email = @Email;", conn, tx))
+                        {
+                            checkCmd.Parameters.AddWithValue("@Email", model.Email);
+                            var exists = checkCmd.ExecuteScalar();
+
+                            if (exists != null)
+                                return BadRequest(new { message = "Account exists. Please log in.", requiresLogin = true });
+
+                            return BadRequest(new { message = "No account found. Please create one.", requiresAccount = true });
+                        }
+                    }
+
+                    string jobId = Guid.NewGuid().ToString();
+
+                    using (var insertJob = new SQLiteCommand(@"
+                        INSERT INTO Jobs (JobID, ClientID, ServiceID, DateStarted, DateFinished, Status, Summary, NumOfPoints)
+                        VALUES (@JobID, @ClientID, @ServiceID, NULL, NULL, 'Not Started', @Summary, @NumOfPoints);
+                    ", conn, tx))
+                    {
+                        insertJob.Parameters.AddWithValue("@JobID", jobId);
+                        insertJob.Parameters.AddWithValue("@ClientID", clientIdToUse);
+                        insertJob.Parameters.AddWithValue("@ServiceID", model.Service);
+                        insertJob.Parameters.AddWithValue("@Summary", model.Summary);
+                        insertJob.Parameters.AddWithValue("@NumOfPoints", model.Points);
+                        insertJob.ExecuteNonQuery();
+                    }
+
+                    tx.Commit();
+
+                    return Ok(new { clientId = clientIdToUse, jobId });
                 }
             }
-            catch
-            {
-                return StatusCode(500, new { message = "Server error." });
             }
+        
         }
 
 
-        // ------------------ STEP 2 (find dates) ------------------
         [HttpPost("step2")]
         public IActionResult Step2([FromBody] BookingStep2Request model)
         {
@@ -133,7 +117,6 @@ namespace Neaproject.Controllers
         }
 
 
-        // ------------------ STEP 2 CONFIRM (save appointment) ------------------
         [HttpPost("step2/confirm")]
         public IActionResult ConfirmStep2([FromBody] BookingStep2ConfirmRequest model)
         {
@@ -144,8 +127,6 @@ namespace Neaproject.Controllers
             if (!DateTime.TryParse(model.SelectedDate, out var date))
                 return BadRequest(new { message = "Invalid date format." });
 
-            try
-            {
                 using (var conn = _db.GetConnection())
                 {
                     conn.Open();
@@ -153,59 +134,55 @@ namespace Neaproject.Controllers
                     bool amTaken = false;
                     bool pmTaken = false;
 
-                    using (var cmd = new SQLiteCommand(
-                        @"SELECT TimeSlot FROM Appointments WHERE ScheduledDate = @Date;", conn))
+                using (var cmd = new SQLiteCommand(
+                    @"SELECT TimeSlot FROM Appointments WHERE ScheduledDate = @Date;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@Date", date.ToString("yyyy-MM-dd"));
+                    using (var r = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@Date", date.ToString("yyyy-MM-dd"));
-                        using (var r = cmd.ExecuteReader())
+                        while (r.Read())
                         {
-                            while (r.Read())
-                            {
-                                int slot = r.GetInt32(0);
-                                if (slot == 1) amTaken = true;
-                                else pmTaken = true;
-                            }
+                            int slot = r.GetInt32(0);
+                            if (slot == 1) amTaken = true;
+                            else pmTaken = true;
                         }
                     }
-
-                    int slotToBook =
-                        !amTaken ? 1 :
-                        !pmTaken ? 0 :
-                        throw new Exception("Both slots full");
-
-                    // INSERT appointment
-                    using (var insert = new SQLiteCommand(
-                        @"INSERT INTO Appointments (AppointmentID, JobID, ScheduledDate, TimeSlot)
-                          VALUES (@AID, @JID, @Date, @Slot);", conn))
-                    {
-                        insert.Parameters.AddWithValue("@AID", Guid.NewGuid().ToString());
-                        insert.Parameters.AddWithValue("@JID", model.JobId);
-                        insert.Parameters.AddWithValue("@Date", date.ToString("yyyy-MM-dd"));
-                        insert.Parameters.AddWithValue("@Slot", slotToBook);
-                        insert.ExecuteNonQuery();
-                    }
-
-                    // UPDATE JOB STATUS
-                    using (var update = new SQLiteCommand(
-                        @"UPDATE Jobs SET Status='Booked' WHERE JobID=@JID;", conn))
-                    {
-                        update.Parameters.AddWithValue("@JID", model.JobId);
-                        update.ExecuteNonQuery();
-                    }
-
-                    return Ok(new
-                    {
-                        message = "Booking confirmed.",
-                        jobId = model.JobId,
-                        selectedDate = date.ToString("yyyy-MM-dd"),
-                        timeSlot = slotToBook == 1 ? "AM" : "PM"
-                    });
                 }
+
+                int slotToBook =
+                    !amTaken ? 1 :
+                    !pmTaken ? 0 :
+                    throw new Exception("Both slots full");
+
+                using (var insert = new SQLiteCommand(
+                    @"INSERT INTO Appointments (AppointmentID, JobID, ScheduledDate, TimeSlot)
+                      VALUES (@AID, @JID, @Date, @Slot);", conn))
+                {
+                    insert.Parameters.AddWithValue("@AID", Guid.NewGuid().ToString());
+                    insert.Parameters.AddWithValue("@JID", model.JobId);
+                    insert.Parameters.AddWithValue("@Date", date.ToString("yyyy-MM-dd"));
+                    insert.Parameters.AddWithValue("@Slot", slotToBook);
+                    insert.ExecuteNonQuery();
+                }
+
+                using (var update = new SQLiteCommand(
+                    @"UPDATE Jobs SET Status='Booked' WHERE JobID=@JID;", conn))
+                {
+                    update.Parameters.AddWithValue("@JID", model.JobId);
+                    update.ExecuteNonQuery();
+                }
+
+                return Ok(new
+                {
+                    message = "Booking confirmed.",
+                    jobId = model.JobId,
+                    selectedDate = date.ToString("yyyy-MM-dd"),
+                    timeSlot = slotToBook == 1 ? "AM" : "PM"
+                });
             }
-            catch
-            {
-                return StatusCode(500, new { message = "Server error while confirming booking." });
-            }
+        }
+          
         }
     }
 }
+
