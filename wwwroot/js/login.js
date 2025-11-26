@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => { //runs code after HTML is fully loaded
     console.log("login.js loaded"); //debugging log
 
     //get elements
@@ -18,7 +18,7 @@
         const password = document.getElementById("password").value; //get value from password input
         const body = { email, password }; //create JSON object that will be sent to backend
 
-        if (output) output.textContent = "Logging in...";//loading message
+        if (output) output.textContent = "Logging in..."; //loading message
         
         const response = await fetch("/api/client/login", { //send POST request to server
             method: "POST", //tells server it is a POST request
@@ -60,3 +60,4 @@
         }
     });
 });
+
