@@ -7,16 +7,15 @@ using Neaproject.Dtos;
 
 namespace Neaproject.Data
 {
-    public class SqliteDataAccess
+    public class SqliteDataAccess //class to allow communication with database
     {
-        private readonly string _connString = "Data Source=database.db";
+        private readonly string _connString = "Data Source=database.db"; //connection string that points to the database file in the project directory
 
-        public SQLiteConnection GetConnection()
+        //creates new connection to database using a connection string
+        public SQLiteConnection GetConnection() 
         {
             return new SQLiteConnection(LoadConnectionString());
         }
-
-
         private string LoadConnectionString()
         {
             var dbPath = Path.Combine(AppContext.BaseDirectory, "database.db");
@@ -339,4 +338,5 @@ namespace Neaproject.Data
     }
 
 }
+
 
