@@ -1,13 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
     console.log("booking.js loaded");
 
-    // Basic route protection: must be logged in to access booking
-    const existingClientId = localStorage.getItem("clientID");
-    if (!existingClientId) {
-        window.location.href = "login.html";
-        return;
-    }
-
     const form = document.getElementById("booking-form");
     const nextButton = document.getElementById("nextButton");
     const stage1 = document.getElementById("stage1");
@@ -66,7 +59,6 @@
         console.log("Sending booking step 1 request", body);
         if (output) output.textContent = "Saving your details...";
 
-        try {
             const response = await fetch("/api/booking/step1", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -331,3 +323,4 @@
     }
 
 });
+
