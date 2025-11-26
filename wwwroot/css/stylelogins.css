@@ -1,0 +1,215 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.25);
+    margin-top: 15px;
+    
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.account-form {
+    width: 75%;
+    max-width: 700px;
+    border: 2px solid #075eab;
+    background: white;
+    padding: 32px;
+    gap: 18px;
+    display: inline-block;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.title {
+    width: min(1100px, 96%);
+    margin: 0;
+    text-align: center;
+    border: 2px solid var(--border);
+    padding: 12px;
+    letter-spacing: .3px;
+    font-size: 30px;
+}
+
+form {
+    background-color: white;
+    width: min(1100px, 96%);
+    box-sizing: border-box;
+    display: grid;
+    margin: 0;
+}
+
+.field {
+    display: grid;
+    gap: 10px
+}
+
+    .field + .field {
+        margin-top: 16px;
+    }
+
+.label {
+    display: block;
+    font-size: 15px;
+    border: 2px solid var(--border);
+    text-align: center;
+    color: #075eab;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 38px;
+    background: white;
+    border: 2px solid #fadb14;
+    color: #075aeb;
+    font-weight: bold;
+}
+
+    input:focus {
+        border-color: #075eab;
+        box-shadow: 0 0 0 3px #075eab;
+    }
+
+#submit-button, .back-button{
+    width: 90%;
+    margin-top: 14px;
+    align-content: center;
+    background: #fadb14;
+    border: 1px solid black;
+    color: black;
+}
+
+#change-login {
+    display: block;
+    align-content: center;
+    margin: 20px auto 0;
+    width: 50%;
+    background: #075aeb;
+    white-space: nowrap;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+    #change-login:hover {
+        background: white;
+        border: 2px solid #075aeb;
+        color: #075aeb;
+        font-weight: bold;
+    }
+
+#submit-button,
+#change-login, .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    padding: 10px 14px;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+    .details .field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+.output {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #submit-button, #change-login {
+        padding: 12px 14px;
+    }
+
+    .account-form {
+        padding: 24px 18px 14px;
+    }
+}
+
+/*---------------popup---------------------*/
+
+
+
+
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.25);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-card {
+    background: #ffffff;
+    border: 3px solid #075aeb;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 420px;
+    padding: 28px;
+    text-align: center;
+}
+
+.popup-title {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    border-bottom: 4px solid #fadb14;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    color: #0b1b40;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popupButton {
+    flex: 1;
+    border: 2px solid #075aeb;
+    background: #fadb14;
+    color: #111;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 0;
+    transition: all 0.25s ease;
+}
+
+    .popupButton:hover {
+        background: #075aeb;
+        color: #fff;
+        border-color: #075aeb;
+        transform: scale(1.02);
+    }
+
+@media (max-width: 500px) {
+    .popup-card {
+        padding: 20px;
+    }
+
+    .popup-button {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+}

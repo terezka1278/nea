@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("role") !== "B") {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="business-styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <a href="index.html"><h1>BUSINESS NAME</h1></a>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a id="logoutButton" class="logoutButton">Log out</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="business-home.html">Home</a>
+        <a href="business-quote.html">Make a Quote</a>
+        <a href="business-invoice.html">Make an Invoice</a>
+        <a id="last" href="business-documents.html">Documents</a>
+
+    </div>
+    <hr />
+    <form class="invoice-form">
+        <h2>Invoice Form</h2>
+        <section class="client-details">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname">
+            </div>
+            <div class="form-group">
+                <label for="phonenum">Phone Number</label>
+                <input type="tel" name="phonenum">
+            </div>
+            <div class="form-group">
+                <label for="cid">Client ID</label>
+                <input type="text" name="cid">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-group">
+                <label class="info" for="postcode">Postcode</label>
+                <input type="text" name="postcode">
+            </div>
+            <div class="form-group">
+                <label for="jid">Job ID</label>
+                <input type="text" name="jid">
+            </div>
+            <div class="form-group">
+                <label class="info" for="service">
+                    What service is wanted?
+                    <select name="service">
+                        <option value="testing">Testing</option>
+                        <option value="change">Acessory Change</option>
+                        <option value="addition">Addition</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="points">Number of points</label>
+                <input type="text" name="jid">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" name="date">
+            </div>
+        </section>
+        <section class="summary">
+            <label class="info" for="summary">Write a summary of the service:</label>
+            <textarea rows="20" cols="50" name="summary"></textarea>
+        </section>
+        <section class="supplies">
+            <div class="supplies-header">
+                <span>Supply Name</span>
+                <span> Product Code</span>
+                <span>Quantity</span>
+            </div>
+            <div class="supply-row">
+                <input name="Supplies[0].Name">
+                <input name="Supplies[0].Code">
+                <input name="Supplies[0].Quantity" type="number">
+        </section>
+        <button type="button" onclick="alert('You have submitted this booking form')">Submit</button>
+    </form>
+
+</body>
+</html>

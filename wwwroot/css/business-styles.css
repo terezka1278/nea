@@ -1,0 +1,287 @@
+html {
+    font-family: Cambria, Georgia, Times, serif;
+}
+
+body {
+    justify-content: center;
+    width: 98%;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    color: #075eab;
+    font-size: 40px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 3px;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    height: 4px;
+    background-color: #fadb14;
+    border: none;
+}
+
+@media(max-width:760px) {
+    .header-top {
+        min-height: 70px;
+    }
+
+    #logo {
+        width: 45px;
+    }
+
+    .name-tagline h1 {
+        font-size: 25px;
+    }
+
+
+
+    .aboutsection {
+        flex-direction: columm;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*-------------------header-----------------*/
+header {
+    display: flex;
+    height: auto;
+    overflow: visible;
+    padding: 10px 0;
+    min-height: 75px;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    ;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.15rem;
+}
+
+.branding {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: .6rem;
+}
+
+#logo {
+    max-height: 70px;
+    vertical-align: middle;
+}
+
+.name-tagline {
+    text-align: center;
+}
+
+    .name-tagline h1 {
+        margin: 0;
+        color: #075aeb;
+        letter-spacing: .5px;
+    }
+
+#tagline {
+    margin: 2px 0 0;
+    font-size: 15px;
+    color: black;
+}
+
+.logoutButton {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    padding: 0 15px;
+    background: #075aeb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .logoutButton:hover {
+        background: white;
+        border: 2px solid #075aeb;
+        color: #075aeb;
+        font-weight: bold;
+    }
+
+/*----------------navbar--------------------*/
+.navbar {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+    .navbar a {
+        width: 25%;
+        color: black;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border-left: 3px solid #075eab;
+    }
+
+#last {
+    border-right: 3px solid #075eab;
+}
+
+.navbar a:hover {
+    color: #075eab;
+    text-decoration: underline;
+}
+
+.views {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.middle-row {
+    display: flex;
+}
+
+.day {
+    flex: 1;
+}
+
+.month {
+    flex: 2;
+}
+
+#jobs-today, #month-view, #week-view {
+    border: 1px solid #075eab;
+    padding: 10px;
+    margin: 10px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .calendar th,
+    .calendar td {
+        border: 1px solid #075eab;
+        height: 20px;
+        vertical-align: top;
+        padding: 2px;
+    }
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.client-details {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #075eab;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary {
+    border: 1px solid #075eab;
+    display: flex;
+    flex-direction: column;
+}
+
+.supplies {
+    border: 1px solid #075eab;
+    display: flex;
+    flex-direction: column;
+}
+
+.supplies-header, .supply-row {
+    display: flex;
+}
+
+    .supplies-header span {
+        flex: 1;
+    }
+
+    .supply-row input {
+        flex: 1;
+    }
+
+.documents {
+    display: flex;
+    gap: 15px;
+    width: 100%
+}
+
+.manage-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    align-items: center;
+    height: 35px;
+    padding: 0 15px;
+    background: #075aeb;
+    color: white;
+}
+
+    .button:hover {
+        background: white;
+        border: 2px solid #075aeb;
+        color: #075aeb;
+        font-weight: bold;
+    }
+
+section {
+    border: 3px solid #075eab;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    border-bottom: 3px solid #075eab;
+    margin-bottom: 0.5;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.output {
+    height: 150px;
+    margin-bottom: 25px;
+    flex: 1;
+}

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="client-styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <a href="index.html"><h1>BUSINESS NAME</h1></a>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a id="logoutButton" class="logoutButton">Log out</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="client-home.html">Home</a>
+        <a href="client-booking.html">Book a Quote</a>
+        <a href="client-account.html">Manage Account</a>
+        <a id="last" href="client-documents.html">Bookings</a>
+
+    </div>
+    <hr />
+    <button id="logout">Log out</button>
+
+    <form id="account-changes" class="changes">
+        <div id="address-info" class="side">
+
+            <section id="address" class="change">
+                <div class="old">
+                    <h3 class="section-title">Change address</h3>
+                    <div id="current-address" class="output">
+                        <p>Current:</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <label for="address" class="section-title">New address:</label>
+                    <input name="address" type="text">
+                </div>
+            </section>
+
+            <section id="postcode" class="change">
+                <div class="old">
+                    <h3 class="section-title">Change Postcode</h3>
+                    <div id="current-postcode" class="output">
+                        <p>Current:</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <label for="postcode" class="section-title">New postcode: </label>
+                    <input name="postcode" type="text">
+                </div>
+            </section>
+        </div>
+
+        <div id="personal-info" class="side">
+
+            <section id="password" class="change">
+                <div class="old">
+                    <h3 class="section-title">Change password</h3>
+                    <div id="current-password" class="output">
+                        <p>Current:</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <label for="password" class="section-title">New password: </label>
+                    <input name="password" type="text">
+                </div>
+            </section>
+
+            <section id="email" class="change">
+                <div class="old">
+                    <h3 class="section-title">
+                        Change email:
+                    </h3>
+                    <div id="current-email" class="output">
+                        <p>Current:<p>
+                    </div>
+                </div>
+                <div class="new">
+                    <label for="email" class="section-title">New email: </label>
+                    <input name="email" type="email">
+                </div>
+            </section>
+
+            <section id="phoneNum" class="change">
+                <div class="old">
+                    <h3 class="section-title">
+                        Change phone number
+                    </h3>
+                    <div id="current-phoneNum" class="output">
+                        <p>Current:</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <label for="phoneNum" class="section-title">New phone number:</label>
+                    <input name="phoneNum" type="tel">
+                </div>
+            </section>
+        </div>
+        <div class="submit-row">
+            <button type="submit" id="saveChanges">Save Changes</button>
+        </div>
+
+    </form>
+    <script src="../js/client-account.js" defer></script>
+    <script src="../js/logout.js" defer></script>
+
+</body>
+</html>

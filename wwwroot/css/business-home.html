@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("role") !== "B") {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="business-styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <a href="index.html"><h1>BUSINESS NAME</h1></a>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a id="logoutButton" class="logoutButton">Log out</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="business-home.html">Home</a>
+        <a href="business-quote.html">Make a Quote</a>
+        <a href="business-invoice.html">Make an Invoice</a>
+        <a id="last" href="business-documents.html">Documents</a>
+
+    </div>
+    <hr />
+    <main class="views">
+        <section class="middle-row">
+            <section id="jobs-today" class="day">
+                <h2>Today's Jobs</h2>
+                <ul id="JobsToday">
+                    <!-- data goes here-->
+                </ul>
+            </section>
+            <section id="month-view" class="month">
+                <h2>This Month's Jobs</h2>
+                <table class="calendar" id="month-calendar">
+                    <thead>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data from 2d arrays c#-->
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section id="week-view" class="week">
+            <h2>This Week's Jobs</h2>
+            <table class="calendar" id="week-calendar">
+                <thead>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- data from 2d arrays c#-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="../js/business-home.js"></script>
+    <srcipt src="../js/logout.js"></srcipt>
+</body>
+</html>

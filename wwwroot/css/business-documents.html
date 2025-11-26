@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("role") !== "B") {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="business-styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <a href="index.html"><h1>BUSINESS NAME</h1></a>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a id="logoutButton" class="logoutButton">Log out</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="business-home.html">Home</a>
+        <a href="business-quote.html">Make a Quote</a>
+        <a href="business-invoice.html">Make an Invoice</a>
+        <a id="last" href="business-documents.html">Documents</a>
+
+    </div>
+    <hr />
+    <div class="documents">
+        <section id="quotes" class="document">
+            <h2 class="section-title">Quotes</h2>
+            <div id="quote-output" class="output">
+            </div>
+        </section>
+        <section id="invoices" class="document">
+            <h2 class="section-title">Invoices</h2>
+            <div id="invoice-output" class="output">
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="manage-bookings" class="booking">
+            <h2 class="section-title">Manage a booking</h2>
+            <div class="manage-box">
+                <div id="manage-output" class="output"></div>
+                <div id="buttons">
+                    <button type="button" class="button" id="cancel">Cancel</button>
+                    <button type="button" class="button" id="reschedule">Reschedule</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/business-jobs.js"></script>
+    <script src="../js/business-documents.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

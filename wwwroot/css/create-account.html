@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Access</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/stylelogins.css" />
+    
+</head>
+<body>
+
+    <section class="account-form">
+        <a class="back-button" href="index.html">Back to website</a>
+        <h2 class="title">Enter your details: </h2>
+
+        <form id="create-account-form">
+            <label class="field">
+                <span class="label">Email: </span>
+                <input id="email" name="email" type="email" placeholder="email123@example.com" required />
+            </label>
+            <label class="field">
+                <span class="label">Enter phone number:</span>
+                <input id="phoneNum" name="phoneNum" type="tel" minlength="8" />
+            </label>
+            <label class="field">
+                <span class="label">Password: </span>
+                <input id="password" name="password" type="password" placeholder="########" minlength="8" required />
+            </label>
+
+            <label class="field" id="confirm-wrap">
+                <span class="label">Re-enter password:</span>
+                <input id="confirm" name="confirm" type="password" placeholder="Repeat password" minlength="8" />
+            </label>
+
+            <div class="details" id="details-name">
+                <label class="field">
+                    <span class="label">Enter first name:</span>
+                    <input id="firstname" name="firstname" type="text" minlength="2" />
+                </label>
+                <label class="field">
+                    <span class="label">Enter last name:</span>
+                    <input id="lastname" name="lastname" type="text" minlength="2" />
+                </label>
+            </div>
+            <div class="details" id="details-location">
+
+                <label class="field">
+                    <span class="label">Enter postcode:</span>
+                    <input id="postcode" name="postcode" type="text" minlength="8" />
+                </label>
+                <label class="field">
+                    <span class="label">Address:</span>
+                    <input id="address" name="address" type="text" minlength="8" />
+                </label>
+
+            </div>
+
+            <output id="create-output" class="output">OUTPUT HERE</output>
+
+            <button id="submitButton" type="submit">CREATE ACCOUNT</button>
+            <a href="login.html" id="change-login" type="button">Already have an account?</a>
+        </form>
+    </section>
+    <!-- Popup-->
+    <div id="nextPopup" class="popupOverlay">
+        <div class="popup-card">
+            <div class="popup-title">Account created</div>
+            <div class="popup-actions">
+                <a href="index.html" id="back" class="popupButton">Go back to main website</a>
+                <a href="login.html" id="login" class="popupButton">Go to Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/create-account.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+﻿html {
+    font-family: Cambria, Georgia, Times, serif;
+}
+
+body {
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    color: #075eab;
+    font-size: 40px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 3px;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    height: 4px;
+    background-color: #fadb14;
+    border: none;
+}
+
+@media(max-width:760px) {
+    .header-top {
+        min-height: 70px;
+    }
+
+    #logo {
+        width: 45px;
+    }
+
+    .name-tagline h1 {
+        font-size: 25px;
+    }
+
+    .account-link {
+        height: 35px;
+        padding: 0 12px;
+    }
+
+    .aboutsection {
+        flex-direction: column;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*-------------------header-----------------*/
+header {
+    display: flex;
+    height: auto;
+    overflow: visible;
+    padding: 10px 0;
+    min-height: 75px;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.15rem;
+}
+
+.branding {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: .6rem;
+}
+
+#logo {
+    max-height: 70px;
+    vertical-align: middle;
+}
+
+.name-tagline {
+    text-align: center;
+}
+
+    .name-tagline h1 {
+        margin: 0;
+        color: #075aeb;
+        letter-spacing: .5px;
+    }
+
+#tagline {
+    margin: 2px 0 0;
+    font-size: 15px;
+    color: black;
+}
+
+.accountButton {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    padding: 0 15px;
+    background: #075aeb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .accountButton:hover {
+        background: white;
+        border: 2px solid #075aeb;
+        color: #075aeb;
+        font-weight: bold;
+    }
+
+/*----------------navbar--------------------*/
+.navbar {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+    .navbar a {
+        width: 20%;
+        color: black;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border-left: 3px solid #075eab;
+    }
+
+#last {
+    border-right: 3px solid #075eab;
+}
+
+.navbar a:hover {
+    color: #075eab;
+    text-decoration: underline;
+}
+
+
+/*------------------about------------------*/
+.aboutsection {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+.heading-left {
+    text-align: left;
+    margin-left: 40px;
+}
+
+article {
+    flex: 2;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+figure {
+    flex: 1;
+    align-items: stretch;
+    justify-content: center;
+}
+
+    figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+figcaption {
+    text-align: center;
+}
+
+/*-------------how it works-----------------------*/
+.steps {
+    display: flex;
+    justify-content: center;
+}
+
+.step {
+    flex: 1;
+}
+
+    .step p {
+        padding: 10px;
+        border-left: 3px solid #075eab;
+        border-right: 3px solid #075eab;
+    }
+
+    .step h2 {
+        text-align: center;
+    }
+/*---------------testimonials---------------------*/
+.review {
+    border: 3px solid #075eab;
+    margin: 20px 40px;
+    padding: 10px 20px 3px;
+}
+
+    .review h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+.name-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/*---------------popup---------------------*/
+
+
+
+
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.25);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-card {
+    background: #ffffff;
+    border: 3px solid #075aeb;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 420px;
+    padding: 28px;
+    text-align: center;
+}
+
+.popup-title {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    border-bottom: 4px solid #fadb14;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    color: #0b1b40;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popupButton {
+    flex: 1;
+    border: 2px solid #075aeb;
+    background: #fadb14;
+    color: #111;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 0;
+    transition: all 0.25s ease;
+}
+
+    .popupButton:hover {
+        background: #075aeb;
+        color: #fff;
+        border-color: #075aeb;
+        transform: scale(1.02);
+    }
+
+@media (max-width: 500px) {
+    .popup-card {
+        padding: 20px;
+    }
+
+    .popup-button {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+}
+
+/*------Booking form----*/
+form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #075aeb;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(7, 90, 235, 0.5);
+    width: 90%;
+    align-content: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.info {
+    display: inline;
+    gap: 18px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    display: flex;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.stage-heading {
+    margin-left: 10px;
+}
+
+.stage {
+    background-color: 7 90 235 0.25;
+    align-content: center;
+}
+
+.personal {
+    background-color: white;
+}
+
+.job-info {
+    background-color: white;
+}
+
+.date {
+    background-color: white;
+}

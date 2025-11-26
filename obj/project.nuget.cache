@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QfRShusyP1c=",
+  "success": true,
+  "projectFilePath": "V:\\B2206426\\New folder\\Neaproject 25.11\\Neaproject\\Neaproject\\Neaproject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\B2206426\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
+    "C:\\Users\\B2206426\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\B2206426\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
+  ],
+  "logs": []
+}

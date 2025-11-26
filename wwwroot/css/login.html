@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Access</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/stylelogins.css" />
+   
+</head>
+<body>
+
+    <section class="account-form">
+        <a class="back-button" href="index.html">Back to website</a>
+        <h2 class="title">Enter your account details: </h2>
+
+        <form id="login-form">
+            <label for="email" class="field">
+                <span class="label">Email: </span>
+                <input id="email" name="email" type="email" placeholder="email123@example.com" required />
+            </label>
+
+            <label for="password" class="field">
+                <span class="label">Password: </span>
+                <input id="password" name="password" type="password" placeholder="########" minlength="8" required />
+            </label>
+
+            <output id="login-output" class="output">
+            </output>
+
+            <button id="submitButton" type="submit">LOG IN</button>
+            <a href="create-account.html" id="change-login" type="button">Create an account?</a>
+        </form>
+    </section>
+    <!-- Popup-->
+    <div id="confirmationPopup" class="popupOverlay">
+        <div class="popup-card">
+            <div class="popup-title">You are now logged in</div>
+            <div class="popup-actions">
+                <a href="index.html" id="back" class="popupButton">Go back to main website</a>
+                <a href="client-home.html" id="account" class="popupButton">Go to account home</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js" defer></script>
+
+</body>
+</html>

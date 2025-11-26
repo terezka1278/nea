@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+   
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <h1>BUSINESS NAME</h1>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="accountButton" class="accountButton">Account</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book a Quote</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <hr />
+
+    <h2 class="heading">BOOK NOW</h2>
+    <form id="booking-form">
+        <h3 class="stage-heading" id="stage1">Stage 1</h3>
+        <fieldset class="stage">
+            <fieldset class="personal">
+                <legend>Personal Details:</legend>
+                <div class="info">
+                    <label for="fname">First Name<input id="firstname" type="text" name="fname"></label>
+                    <label for="lname">Last Name<input id="lastname" type="text" name="lname"></label>
+                </div>
+                <br />
+                <div>
+                    <label for="phoneNum">Phone Number<input id="phoneNum" type="tel" name="phonenum"></label>
+                    <label for="email">Email<input id="email" type="email" name="email"></label>
+                </div>
+                <br />
+                <label class="info" for="postcode">Postcode<input id="postcode" type="text" name="postcode"></label><br />
+                <label class="info" for="address">Address<textarea id="address" rows="10" cols="30" name="address"></textarea></label>
+            </fieldset>
+            <fieldset class="job-info">
+                <legend>Service Details:</legend>
+                <label class="info" for="service">
+                    What service do you want?
+                    <select id="service" name="service">
+                        <option value="rewire">Rewire</option>
+                        <option value="testing">Testing</option>
+                        <option value="change">Acessory Change</option>
+                        <option value="addition">Addition</option>
+                        <option value="containment">Containment</option>
+                        <option value="other">Data/Fire/Other</option>
+                    </select>
+                </label>
+                <label class="info" for="points">How many points do you have? (e.g. how many sockets/lights?)<input id="points" type="number" name="points"></label>
+                <label class="info" for="summary">
+                    Write a summary of the service you require:
+                    <textarea id="summary" rows="20" cols="50" name="summary"></textarea>
+                </label>
+                <button type="button" id="nextButton">Next</button>
+                <div id="stage1-output"></div>
+            </fieldset>
+        </fieldset>
+        <h3 class="stage-heading" id="stage2">Stage 2</h3>
+        <fieldset class="stage">
+            <fieldset class="date">
+                <label for="days">What days of the week are you available?</label>
+                <div class="options">
+                    <label><input type="checkbox" name="monday" class="days"> Monday</label>
+                    <label><input type="checkbox" name="tuesday" class="days"> Tuesday</label>
+                    <label><input type="checkbox" name="wednesday" class="days"> Wednesday</label>
+                    <label><input type="checkbox" name="thursday" class="days"> Thursday</label>
+                    <label><input type="checkbox" name="friday" class="days"> Friday</label>
+                </div>
+                <div id="date-output">
+                    <p>OUTPUT TO BE DONE</p>
+                </div>
+            </fieldset>
+
+            <button id="submit" type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <!-- Popup-->
+    <div id="account-popup" class="popup-overlay" hidden>
+        <div class="popup-card">
+            <div class="popup-title">Do you have an account?</div>
+            <div class="popup-actions">
+                <a href="login.html" id="button-yes" class="popup-button">YES</a>
+                <a href="create-account.html" id="button-no" class="popup-button">NO</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Popup -->
+    <div id="confirm-popup" class="popup-overlay" hidden>
+        <div class="popup-card">
+            <div class="popup-title">Booking Confirmed</div>
+            <p id="confirm-popup-message"></p>
+            <div class="popup-actions">
+                <button id="confirm-popup-close" class="popup-button">Close</button>
+                <!-- optional: link to client account page -->
+                <!-- <a href="client-account-home.html" class="popup-button">View my bookings</a> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/booking.js" defer></script>
+
+</body>
+
+</html>

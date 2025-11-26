@@ -1,0 +1,116 @@
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.runtime.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.endpoints.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\database.db
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.exe
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.deps.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.runtimeconfig.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.pdb
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\Dapper.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.AssemblyReference.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfoInputs.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfo.cs
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.CoreCompileInputs.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.sourcelink.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\scopedcss\bundle\Neaproject.styles.css
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.Up2Date
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\refint\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.pdb
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.genruntimeconfig.cache
+C:\Users\terez\Desktop\CODE\Neaproject\Neaproject\obj\Debug\net8.0\ref\Neaproject.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.Development.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.runtime.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.endpoints.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\database.db
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.exe
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.deps.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.runtimeconfig.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.pdb
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Dapper.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\System.Data.SQLite.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.AssemblyReference.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rpswa.dswa.cache.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.GeneratedMSBuildEditorConfig.editorconfig
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfoInputs.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfo.cs
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.CoreCompileInputs.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.MvcApplicationPartsAssemblyInfo.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\scopedcss\bundle\Neaproject.styles.css
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.development.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.Up2Date
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\refint\Neaproject.dll
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.pdb
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.genruntimeconfig.cache
+V:\B2206426\New folder\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\ref\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.AssemblyReference.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfoInputs.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.AssemblyInfo.cs
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.CoreCompileInputs.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.sourcelink.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\refint\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.pdb
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\appsettings.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\database.db
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.runtime.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.staticwebassets.endpoints.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.exe
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.deps.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.runtimeconfig.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Neaproject.pdb
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\Dapper.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\System.Data.SQLite.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\bin\Debug\net8.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\scopedcss\bundle\Neaproject.styles.css
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.csproj.Up2Date
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\Neaproject.genruntimeconfig.cache
+C:\Users\terez\Desktop\CODE\Neaproject 17.11\Neaproject\Neaproject\Neaproject\obj\Debug\net8.0\ref\Neaproject.dll

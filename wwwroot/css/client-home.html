@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSINESS NAME</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="client-styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSLg6vniFzhaxQiQnDmLGJP4xbQJwqYiykw&s" alt="logo" id="logo" />
+                <div class="name-tagline">
+                    <a href="index.html"><h1>BUSINESS NAME</h1></a>
+                    <h2 id="tagline">Tagline</h2>
+                </div>
+            </div>
+        </div>
+        <a id="logoutButton" class="logoutButton">Log out</a>
+    </header>
+
+    <hr />
+
+    <div class="navbar">
+        <a href="client-home.html">Home</a>
+        <a href="booking.html">Book a Quote</a>
+        <a href="client-account.html">Manage Account</a>
+        <a id="last" href="client-documents.html">Bookings</a>
+
+    </div>
+    <hr />
+
+    <section id="upcoming-bookings" class="booking">
+        <h2 class="section-title">Upcoming Bookings</h2>
+        <div id="upcoming-output" class="output">
+        </div>
+    </section>
+
+    <section id="previous-bookings" class="booking">
+        <h2 class="section-title">Previous Bookings</h2>
+        <div id="previous-output" class="output">
+        </div>
+    </section>
+
+    <section id="contact">
+        <div id="contact-info">
+            <h2 class="section-title">Contact Us</h2>
+            <div id="info"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dui mi, congue vitae dui sit amet, consequat vestibulum risus. Aliquam mauris erat, sodales sit amet purus id, eleifend eleifend orci. Ut tempor interdum nibh, et sagittis nunc. Etiam rhoncus ullamcorper lacus, ut vestibulum lorem vulputate a. Nullam a euismod turpis. Suspendisse volutpat lectus et ornare luctus. Donec commodo risus eu justo iaculis fermentum. </p></div>
+
+        </div>
+
+        <form id="contact-form">
+            <fieldset>
+                <div id="job-info">
+                    <label class="info" for="service">
+                        What service do you want?
+                        <select name="service">
+                            <option value="rewire">Rewire</option>
+                            <option value="testing">Testing</option>
+                            <option value="change">Acessory Change</option>
+                            <option value="addition">Addition</option>
+                            <option value="containment">Containment</option>
+                            <option value="other">Data/Fire/Other</option>
+                        </select>
+                    </label>
+                    <label class="info" for="points">How many points do you have? (e.g. how many sockets/lights?)<input type="number" name="points"></label>
+                </div>
+                <div id="address">
+                    <label class="info" for="postcode">Postcode<input type="text" name="postcode"></label>
+                    <button type="button" onclick="alert('You have submitted this booking form')">Submit</button>
+                </div>
+
+                <label class="info" for="summary">
+                    Write a summary of the service you require:
+                    <textarea rows="20" cols="50" name="summary"></textarea>
+                </label>
+            </fieldset>
+        </form>
+    </section>
+    <script src="..//js/client-home.js"></script>
+    <script src="../js/logout.js" defer></script>
+</body>
+</html>
